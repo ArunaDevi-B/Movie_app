@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Container{
+  width:300px;
+  margin-top: 30px;
+}
+.thumbnails{
+  height:500px;
+  width:300px;
+}
+.title-rating{
+  font-size:20px;
+  display:flex;
+  justify-content:space-between;  
+}
+.movie-summary{
+  margin-top:0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movie-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  font-family: sans-serif;
+}
+
+.movie-info-page{
+  font-size: 20px;
+  width:100%;
+}
+
+.like-dislike{
+  font-size:15px;
+  margin-right:1rem;
+  margin-bottom:2rem;
+}
+
+.addMovie-btn{
+  padding:10px;
+  margin-top:30px;
+  margin-left: 25%;
+  border-radius: 10px;
+}
+
+.add-movie-form{
+  margin-bottom: 20px;
+  display:flex;
+  flex-direction:column ;
+}
+
+.add-movie-btn{
+    width:100%;
+}
+
+.page-notfound{
+  width:80%;
+  margin-left: 170px;
+  object-fit: cover;
+}
+
+.icons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-delete{
+  display: flex;
+}
+
+.theme-btn{
+  /* padding-left: 50px; */
+  /* padding-left: 100px; */
+  text-align: end;
 }
