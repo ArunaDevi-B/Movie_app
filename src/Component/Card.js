@@ -1,5 +1,5 @@
 import React from "react";
-import { Likedislike} from "./Likedislike"
+import { Likedislike } from "./Likedislike"
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -9,19 +9,12 @@ import InfoIcon from '@mui/icons-material/Info';
 import { API } from "./Global";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from '@mui/icons-material/Edit';
+import axios from "axios";
 
 
 function Card({movie, id }){
-    const getMovies=()=>{
-        fetch(`${API}/movies`, {
-          method:"GET",
-        })
-        .then((data)=>data.json())
-        .then((mvs)=>setMovieList(mvs))
-      }
-    
-      useEffect(()=>getMovies(),[]);
-      const navigate = useNavigate()
+  const [movieList, setMovieList] = useState([]);    
+     const navigate = useNavigate()
     
     // const movie={
     //        src:"https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG", 
@@ -37,7 +30,7 @@ function Card({movie, id }){
     // const summarystyles={
     //     display:show===true ? "block" : "none",
     // }
-    const [movieList, setMovieList] = useState([]);
+    
 
     return(
         <div className="Container">
@@ -67,10 +60,10 @@ function Card({movie, id }){
                 <IconButton 
                 color="error"
                 onClick={()=>{
-                  fetch(`${API}/movies/${id}`, {
+                  fetch(`${API}/movies/${movie.id}`, {
                      method:"DELETE",
                    })
-                   .then(()=>getMovies())
+                   .then(()=>window.location.reload())
                  }}>
               <DeleteIcon />
                  </IconButton>

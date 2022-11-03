@@ -17,6 +17,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useEffect } from "react";
 import { EditMovie } from "./EditMovie";
+import { BasicForm } from "./BasicForm";
 // const movieDetails = [
 //   {
 //     src: "https://flxt.tmsimg.com/assets/p9561344_p_v10_ab.jpg",
@@ -186,7 +187,7 @@ const App = () => {
         <Button color="inherit"
         onClick={()=>navigate("/movies")}>Movies</Button>
         <Button color="inherit"
-        onClick={()=> navigate("/movie/add")} >Add Movie</Button>
+        onClick={()=> navigate("/movies/add")} >Add Movie</Button>
         {/* <Button color="inherit"
         onClick={()=> navigate("/colors")} >Color Game</Button> */}
         <Button className="theme-btn"
@@ -199,9 +200,11 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<MovieList/>} />
         <Route path="/movies/:id" element={<MovieInfo />}/>
-        <Route path="/movie/add" element={<AddMovie />}/>
+        <Route path="/movies/add" element={<AddMovie />}/>
         <Route path="/movies/edit/:id" element={<EditMovie />}/>
         <Route path="/colors" element={<AddColor />} />
+        <Route path="/basic-form" element={<BasicForm />} />
+
         {/* <Route path="/films" element={<Navigate replace to="/movies" />}  />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="*" element={<Navigate replace to="/404" />} />
