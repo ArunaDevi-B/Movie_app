@@ -1,1 +1,1 @@
-export const API="https://node-backend-code.herokuapp.com";
+export const API="https://movie-flix.onrender.com";
